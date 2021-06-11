@@ -115,3 +115,14 @@ audio{
 
 }
 
+@media only screen and (max-width:480px){
+
+    .glow{
+        font-size:8vw;
+    }
+    .yourname{
+        font-size:3vw;
+    }
+
+}
+

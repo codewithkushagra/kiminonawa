@@ -29,7 +29,10 @@
         var count=1;
         
         
-        document.getElementById("music").play;
+        if(document.getElementById("music").autoplay == true)
+        {
+            count=0;
+        }
         
 
         function check()

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>君の名は。</title>
 </head>
-<body onload="myFunction()">
+<body>
     
     <div class="container">
         <div id="blackplay" class="blacklayer" onClick="check()">
@@ -29,13 +29,13 @@
         var count=1;
 
         function myFunction() {
-            var x = document.getElementById("music").play();
+            var x = document.getElementById("music").autoplay;
         }
 
         function check()
         {
             var x= document.getElementById("music")
-            if (count%2==0)
+            if (count%2!=0)
             {   
                 x.play();
             }

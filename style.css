@@ -34,15 +34,6 @@ html, body{
     }
   }
 
-
-
-
-
-
-
-
-
-
 .container{
     height:100%;
     background: url("images/meetsceen.jpg");
@@ -81,11 +72,15 @@ p{
     word-spacing: 2px;
 }
 
-.bottomcontrol{
-    height:8%;
-    width:100%;
-    background:rgb(2, 5, 48);
-    opacity: 0.5;
-    position: absolute;
-    bottom: 0;
+
+@media only screen and (max-width:940px){
+
+    .glow{
+        font-size:5vw;
+    }
+    p{
+        font-size:2vw;
+    }
+
 }
+

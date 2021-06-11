@@ -14,7 +14,7 @@
         <div id="blackplay" class="blacklayer" onClick="check()">
             <div class="maintext">
                 <h2 class="glow" onClick="changeSong()">君の名は。</h2>
-                <p> YOUR NAME</p>
+                <p class="yourname"> YOUR NAME</p>
             </div>
             <audio id="song1"  >
                 <source src="music/Nandemonaiya.mp3" type="audio/mpeg">
@@ -22,7 +22,10 @@
             <audio id="song2"  >
                 <source src="music/kiminonawa.mp3" type="audio/mpeg">
             </audio>
-            
+            <div class="bottomcontrol">
+                <h3 id="currentsong">PLAY</h3>
+                <p>click anywhere to play a song......</p>
+            </div>
         </div>
     </div>
     
@@ -31,7 +34,7 @@
     <script>
 
         var count=1;
-        
+        currentsong="Nandemonaiya"
         var music="song1"
         
         function changeSong()
@@ -41,9 +44,13 @@
             if(music=="song1")
             {
                 music="song2"
+                document.getElementById("currentsong").innerHTML="Sparkle"
+                currentsong="Sparkle"
             }
             else{
+                currentsong="Nandemonaiya"
                 music="song1"
+                document.getElementById("currentsong").innerHTML="Nandemonaiya"
             }
         }
 
@@ -51,11 +58,13 @@
         {
             
             if (count%2!=0)
-            {   
+            {
+                document.getElementById("currentsong").innerHTML=currentsong   
                 document.getElementById(music).play();
             }
             else
             {
+                document.getElementById("currentsong").innerHTML="Paused"
                 document.getElementById(music).pause();
             } 
             count++;

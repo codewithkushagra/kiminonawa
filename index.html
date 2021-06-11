@@ -13,12 +13,16 @@
     <div class="container">
         <div id="blackplay" class="blacklayer" onClick="check()">
             <div class="maintext">
-                <h2 class="glow">君の名は。</h2>
+                <h2 class="glow" onClick="changeSong()">君の名は。</h2>
                 <p> YOUR NAME</p>
             </div>
-            <audio id="music" loop >
+            <audio id="song1"  >
                 <source src="music/Nandemonaiya.mp3" type="audio/mpeg">
             </audio>
+            <audio id="song2"  >
+                <source src="music/kiminonawa.mp3" type="audio/mpeg">
+            </audio>
+            
         </div>
     </div>
     
@@ -27,17 +31,32 @@
     <script>
 
         var count=1;
+        
+        var music="song1"
+        
+        function changeSong()
+        {
+            document.getElementById(music).pause()
+            count++;
+            if(music=="song1")
+            {
+                music="song2"
+            }
+            else{
+                music="song1"
+            }
+        }
 
         function check()
         {
-            var x= document.getElementById("music")
+            
             if (count%2!=0)
             {   
-                x.play();
+                document.getElementById(music).play();
             }
             else
             {
-                x.pause();
+                document.getElementById(music).pause();
             } 
             count++;
             

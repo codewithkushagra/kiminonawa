@@ -29,13 +29,13 @@
         var count=1;
 
         function myFunction() {
-            var x = document.getElementById("music").autoplay;
+            var x = document.getElementById("music").play();
         }
 
         function check()
         {
             var x= document.getElementById("music")
-            if (count%2!=0)
+            if (count%2==0)
             {   
                 x.play();
             }

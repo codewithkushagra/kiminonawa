@@ -69,6 +69,7 @@ h2{
     color:rgb(223, 219, 219);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1vw;
+    letter-spacing: 5px;
     font-weight:100;
     word-spacing: 2px;
 }
